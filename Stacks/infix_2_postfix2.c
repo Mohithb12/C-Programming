@@ -68,7 +68,7 @@ void convert_infix2postfix(char infix[max])
     int top = -1, j = 0, i;
     push(s, &top, '#');
 
-    for (int i = 0; i < infix[i] != '\0'; i++)
+    for (int i = 0; infix[i] != '\0'; i++)
     {
         ch = infix[i];
         while ((f(s[top])) > g(ch))
