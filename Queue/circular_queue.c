@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define max 5
+#define max 4
 
 void insert_cq(int *cq, int *rear, int *count)
 {
