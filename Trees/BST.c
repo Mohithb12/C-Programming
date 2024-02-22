@@ -56,9 +56,31 @@ void preorder(NODE root)
   {
     return;
   }
-  printf("%d\n", root->info);
+  printf("\t%d", root->info);
   preorder(root->llink);
   preorder(root->rlink);
+}
+
+void postorder(NODE root)
+{
+  if (root == NULL)
+  {
+    return;
+  }
+  postorder(root->llink);
+  postorder(root->rlink);
+  printf("\t %d", root->info);
+}
+
+void inorder(NODE root)
+{
+  if (root == NULL)
+  {
+    return;
+  }
+  inorder(root->llink);
+  printf("\t%d", root->info);
+  inorder(root->rlink);
 }
 
 int main()
@@ -67,7 +89,7 @@ int main()
   int ch, elem;
   while (1)
   {
-    printf("Enter \n 1.insert \n2.Preorder traversal \n3.Postorder traversal \n 4.Inorder traversal \nEnter choice");
+    printf("\nEnter \n 1.insert \n2.Preorder traversal \n3.Postorder traversal \n 4.Inorder traversal \nEnter choice");
     scanf("%d", &ch);
     switch (ch)
     {
@@ -77,7 +99,16 @@ int main()
       root = insert(root, elem);
       break;
     case (2):
+      printf("preorder of BST is:");
       preorder(root);
+      break;
+    case (3):
+      printf("postorder of BST is:");
+      postorder(root);
+      break;
+    case (4):
+      printf("inorder of BST is:");
+      inorder(root);
       break;
     default:
       exit(0);
