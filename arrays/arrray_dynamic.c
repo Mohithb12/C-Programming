@@ -13,4 +13,5 @@ int main()
     printf("\nMemory allocated");
 
   free(arr);
+  return 0;
 }
