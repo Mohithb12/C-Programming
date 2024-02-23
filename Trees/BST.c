@@ -1,3 +1,9 @@
+/*Binary search Tree 
+ Using Recursion 
+ ->Preorder
+ ->Postorder
+ -.Inorder
+ */
 #include <stdio.h>
 #include <stdlib.h>
 struct node
