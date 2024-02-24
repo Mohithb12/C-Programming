@@ -1,3 +1,4 @@
+// Basic linked list program
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -107,7 +108,7 @@ void display(struct node *first)
     printf("SLL is empty");
     return;
   }
-  while (cur != NULL)
+  while (cur != NULL) // Traverse till end
   {
     printf("\t %d \t", cur->info);
     cur = cur->link;
@@ -116,7 +117,7 @@ void display(struct node *first)
 
 int main()
 {
-  struct node *first = NULL;
+  struct node *first = NULL; // intialize first to NULL or first node will be 0
   int elem, ch;
   while (1)
   {
