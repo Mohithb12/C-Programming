@@ -82,7 +82,7 @@ struct node *delete_rear(struct node *first)
   {
     printf("%d is deleted", first->info);
     free(first);
-    return NULL;
+    return NULL; // return null here not first
   }
   cur = first;
   prev = NULL;
