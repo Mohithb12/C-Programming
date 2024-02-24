@@ -1,3 +1,11 @@
+/* 
+Basic linked list program
+->insert->front
+->insert->rear
+->delete->front
+->delete->rear
+->display
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
