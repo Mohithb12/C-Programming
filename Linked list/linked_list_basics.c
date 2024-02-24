@@ -66,7 +66,7 @@ struct node *delete_front(struct node *first)
   }
   printf("Elem %d is deleted", first->info);
   next = first->link;
-  free(first);
+  free(first); // free node after deletion
   return next;
 }
 
@@ -86,9 +86,9 @@ struct node *delete_rear(struct node *first)
   }
   cur = first;
   prev = NULL;
-  while (cur->link != NULL)
-  {
-    prev = cur;
+  while (cur->link != NULL) // compare cur->link not cur because
+  {                         // the previos node link of which is to be deleted
+    prev = cur;             // should be made NULL
     cur = cur->link;
   }
   prev->link = NULL;
