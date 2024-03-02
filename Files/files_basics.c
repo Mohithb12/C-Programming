@@ -7,5 +7,5 @@ int main()
   fp = fopen("file.txt", "w");
   fprintf(fp, "%s %s %s %d", "my", "numbeer", "is", 3);
   fclose(fp);
-  return 0;
+  
 }
