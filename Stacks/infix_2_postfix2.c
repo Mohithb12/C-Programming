@@ -1,3 +1,7 @@
+/*
+With push and pop functions infix to postfix conversion
+*/
+
 #include <stdio.h>
 #include <string.h>
 #define max 30
