@@ -44,17 +44,18 @@ void eval_postfix(char postfix[max])
     char ch;
     for (int i = 0; postfix[i] != '\0'; i++)
     {
-        ch = postfix[i];
-        if (isdigit(ch))
+        ch = postfix[i]; // ch is assigned each character
+        if (isdigit(ch)) // checking if ch is digit
         {
+            // if it is a oprand/number then push to stack
             push(stack, &top, ch - '0');
         }
-        else
+        else // else if not number then it is operator pop 2 elem from stack
         {
-            op2 = pop(stack, &top);
-            op1 = pop(stack, &top);
-            result = compute(op1, ch, op2);
-            push(stack, &top, result);
+            op2 = pop(stack, &top);         // assign 1st popped elem to 2nd operator
+            op1 = pop(stack, &top);         // assign 2nd popped elem to 1nd operator
+            result = compute(op1, ch, op2); // call compute function and assigned the returned value to variable
+            push(stack, &top, result);      // push the result into stack
         }
     }
     printf("Result=%d", pop(stack, &top));
