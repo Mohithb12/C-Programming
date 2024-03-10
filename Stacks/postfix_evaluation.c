@@ -36,6 +36,7 @@ int compute(int op1, char ch, int op2)
     }
 }
 
+// IMP function
 void eval_postfix(char postfix[max])
 {
     int stack[max];
