@@ -123,7 +123,7 @@ int main()
     p3->link = p3;
     int n1, n2;
     printf("Enter the number of terms in polynomial 1 and polynomial 2: ");
-    scanf("%d%d", &n1, &n2);
+    scanf("%d %d", &n1, &n2);
     read_poly(p1, n1);
     display(p1);
     read_poly(p2, n2);
