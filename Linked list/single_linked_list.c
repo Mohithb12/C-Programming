@@ -50,7 +50,7 @@ NODE insert_rear(NODE first, int elem)
   temp = getnode();
   temp->info = elem;
   temp->link = NULL;
-  if (temp == NULL)
+  if (first == NULL)
   {
     return temp;
   }
