@@ -41,7 +41,7 @@ void eval_postfix(char postfix[max])
 {
     int stack[max];
     int top = -1, result, op1, op2;
-    char ch;
+    char ch; // intialize ch to char not int
     for (int i = 0; postfix[i] != '\0'; i++)
     {
         ch = postfix[i]; // ch is assigned each character
