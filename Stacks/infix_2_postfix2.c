@@ -6,7 +6,7 @@ With push and pop functions infix to postfix conversion
 #include <string.h>
 #define max 30
 
-int f(char ch)
+int f(char ch) // stack precedence
 {
     switch (ch)
     {
@@ -29,7 +29,7 @@ int f(char ch)
     }
 }
 
-int g(char ch)
+int g(char ch) // input precedence
 {
     switch (ch)
     {
@@ -70,9 +70,9 @@ void convert_infix2postfix(char infix[max])
 {
     char s[max], postfix[max], ch;
     int top = -1, j = 0, i;
-    push(s, &top, '#');
+    push(s, &top, '#'); // fist you should push # to stack
 
-    for (int i = 0; infix[i] != '\0'; i++)
+    for (i = 0; infix[i] != '\0'; i++)
     {
         ch = infix[i];
         while ((f(s[top])) > g(ch))
