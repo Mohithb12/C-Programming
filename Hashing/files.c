@@ -1,3 +1,5 @@
+// Hashing using files
+
 #include <stdio.h>
 #include <stdlib.h>
 #define HZ 3
@@ -123,8 +125,10 @@ int main()
     case 2:
       fp = fopen("k1.txt", "r");
       display(fp, h, n);
+      fclose(fp);
       break;
     case 3:
+      fp = fopen("k1.txt", "r");
       search(fp, h, n);
       break;
     case 4:
