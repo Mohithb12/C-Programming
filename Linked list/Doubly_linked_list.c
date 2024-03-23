@@ -108,7 +108,7 @@ NODE delete_rear(NODE first)
   }
   cur = first;
   prev = NULL;
-  while (cur->rlink != NULL)
+  while (cur->rlink != NULL) // the previos node r link should be made NULL
   {
     prev = cur;
     cur = cur->rlink;
