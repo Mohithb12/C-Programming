@@ -119,6 +119,34 @@ void display(NODE first)
   }
 }
 
+NODE concat(NODE first, NODE second)
+{
+  NODE cur, res = NULL;
+  cur = first;
+  while (cur != NULL)
+  {
+    res = insert_rear(res, cur->info);
+    cur = cur->link;
+  }
+  cur = second;
+  while (cur != NULL)
+  {
+    res = insert_rear(res, cur->info);
+    cur = cur->link;
+  }
+}
+
+NODE rev(NODE first)
+{
+  NODE cur, rev = NULL;
+  cur = first;
+  while (cur != NULL)
+  {
+    rev = insert_front(rev, cur->info);
+    cur = cur->link;
+  }
+}
+
 int main()
 {
   NODE first = NULL;
