@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 // Basic linked list program
-=======
-/* 
+/*
 Basic linked list program
 ->insert->front
 ->insert->rear
@@ -9,7 +7,6 @@ Basic linked list program
 ->delete->rear
 ->display
 */
->>>>>>> 0af8c87150e9a45dedb14afe63aa105f26c9de5f
 #include <stdio.h>
 #include <stdlib.h>
 
