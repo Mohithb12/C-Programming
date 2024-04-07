@@ -70,7 +70,7 @@ void convert_infix2postfix(char infix[max])
 {
     char s[max], postfix[max], ch;
     int top = -1, j = 0, i;
-    push(s, &top, '#'); // fist you should push # to stack
+    push(s, &top, '#'); // first you should push # to stack
 
     for (i = 0; infix[i] != '\0'; i++)
     {
@@ -84,13 +84,12 @@ void convert_infix2postfix(char infix[max])
             push(s, &top, ch);
         }
         else
-            top--;
+            top--; //() paranthesis condition
     }
 
     while (s[top] != '#')
     {
-        postfix[j] = pop(s, &top);
-        j++;
+        postfix[j++] = pop(s, &top);
     }
     postfix[j] = '\0';
     printf("%s", postfix);
