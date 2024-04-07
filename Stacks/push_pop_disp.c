@@ -10,6 +10,9 @@ void push(int *stack, int *top, int n)
     {
         printf("\nstack is full.");
         return;
+        // to avoid overflow condition use
+        // stack = (int *)realloc(stack, n * 2);
+        // to increase memory of stack
     }
     (*top)++;
     stack[*top] = elem;
