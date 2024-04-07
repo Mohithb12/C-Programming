@@ -44,7 +44,7 @@ int main()
 {
     int *q, rear, front, n, ch;
     rear = -1, front = 0;
-    printf("\nenlter number of elements.");
+    printf("\nEnter number of elements.");
     scanf("%d", &n);
     q = (int *)malloc(sizeof(int) * n);
     while (1)
